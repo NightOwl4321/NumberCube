@@ -30,16 +30,30 @@ public class numberCubeTest {
 	 @Test
 	 public void tosser() throws Exception {
 		 tosses();
+		 seven();
 		 assertEquals(true, true);
 	 }
+	 
 
 	private static int[] tosses() {
-		int[] rolles = {0, 0, 0, 0, 0};
+		int[] rolles = new int[5];
 		for(int i = 0; i < 5; i++) {
 			rolles[i] = new Random().nextInt(9);
 		}
 		System.out.println(Arrays.toString(rolles));
 		return rolles;
+	}
+	
+	private static int seven() {
+		int mOO = 0;
+		int[] array1 = tosses();
+		int[] array2 = tosses();
+		int[] addedArray = new int[array1.length];
+		for(int i = 0; i < array1.length; i++) {
+			addedArray[i] = array1[i] + array2[i];
+		}
+		
+		return mOO;
 	}
 
 }
